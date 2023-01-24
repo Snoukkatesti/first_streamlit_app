@@ -68,19 +68,5 @@ if streamlit.button('Add a fruit to the list'):
 # my_cur.execute("insert into fruit_load_list values ('from streamlit')")
 
 
-from owslib.wfs import WebFeatureService
-
-# URL for WFS backend
-url = "http://geo.stat.fi/geoserver/vaestoruutu/wfs"
-
-# Initialize
-wfs = WebFeatureService(url=url)
-
-# Service provider 
-streamlit.text(wfs.identification.title)
-
-# Get WFS version
-streamlit.text(wfs.version)
-
 
 
