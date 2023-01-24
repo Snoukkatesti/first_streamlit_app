@@ -78,18 +78,10 @@ url = "http://geo.stat.fi/geoserver/vaestoruutu/wfs"
 wfs = WebFeatureService(url=url)
 
 # Service provider 
-print(wfs.identification.title)
+streamlit.text(wfs.identification.title)
 
 # Get WFS version
-print(wfs.version)
+streamlit.text(wfs.version)
 
-# Available methods
-print([operation.name for operation in wfs.operations])
 
-# Available data layers
-print(list(wfs.contents))
-
-# Print all metadata of all layers
-for layer, meta in wfs.items():
-    print(meta.__dict__)
 
